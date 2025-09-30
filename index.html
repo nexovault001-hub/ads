@@ -91,9 +91,23 @@
       * Promotional rate for US users. Terms & conditions apply.<br>
       © 2025 Surfshark — Affiliate page, content for promotional purposes only.
     </footer>
-    <script type="text/javascript">!function(){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src="https://s9aoz.bemobtrcks.com/landing/1b043394-d01e-40c7-a9cb-91cfa9418ae5?callback=REPLACE&rule=REPLACE&path=REPLACE&landing=REPLACE&"+window.location.search.substring(1);var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)}();</script>
+    <script type="text/javascript">
+function bemobCb(params) {
+    var t = params.trackingDomain+'/click/';
+    var re = new RegExp(t+'?(\\d*)');
+    var e = document.querySelectorAll('a[href*="'+t+'"]');
+    for (var i = 0; i < e.length; i++) {
+        var ex = re.exec(e[i].href);
+        if (ex) {
+            e[i].href = params.ctaSecureUrl.replace('%%OFFER_NUMBER%%', ex[1] || 1);
+        }
+    }
+}
+</script>
+<script type="text/javascript">!function(){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src="https://s9aoz.bemobtrcks.com/landing/1b043394-d01e-40c7-a9cb-91cfa9418ae5?callback=bemobCb&rule=1&path=1&landing=1&"+window.location.search.substring(1);var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)}();</script><noscript><img src="https://s9aoz.bemobtrcks.com/landing/1b043394-d01e-40c7-a9cb-91cfa9418ae5?rule=1&path=1&landing=1" alt=""></noscript>
   </div>
 </body>
 </html>
+
 
 
