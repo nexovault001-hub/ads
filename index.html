@@ -1,149 +1,96 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Surfshark — 快速、安全的 VPN（美国优惠）</title>
-  <meta name="description" content="快速、安全、无限设备 — 立刻体验 Surfshark VPN。30天退款保证，限时折扣。"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Secure Your Internet with Surfshark VPN</title>
+  <meta name="description" content="Protect your privacy, unblock content, and browse safely. Exclusive offer for US users. 30-day money-back guarantee." />
   <style>
-    /* =========== 基本样式（内联，便于投放） =========== */
-    :root{ --accent:#0b84ff; --bg:#f7fbff; --card:#ffffff; --muted:#6b7280; --success:#16a34a;}
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue","Noto Sans",Arial;" background:var(--bg); color:#0f172a; -webkit-font-smoothing:antialiased}
-    .container{max-width:980px;margin:28px auto;padding:20px;}
-    .card{background:var(--card);border-radius:12px;padding:20px;box-shadow:0 6px 24px rgba(12,14,26,0.06)}
-    .hero{display:flex;gap:24px;align-items:center;flex-wrap:wrap}
-    .hero-left{flex:1;min-width:280px}
-    .logo{display:flex;gap:10px;align-items:center}
-    .logo img{height:36px}
-    h1{font-size:28px;margin:12px 0}
-    p.lead{color:var(--muted);margin:0 0 18px 0}
-    .price-box{display:inline-block;background:#f0f9ff;border-radius:10px;padding:14px 18px;margin-bottom:14px}
-    .price-big{font-size:22px;font-weight:700;color:var(--accent)}
-    .cta{display:inline-block;padding:14px 20px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;margin-right:10px}
-    .secondary-cta{display:inline-block;padding:12px 16px;border-radius:10px;border:1px solid #e6eefb;color:var(--accent);text-decoration:none}
-    .features{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
-    .feat{flex:1;min-width:160px;padding:14px;border-radius:10px;background:#fbfdff;border:1px solid #f0f6ff}
-    .trust{display:flex;gap:12px;align-items:center;margin-top:16px}
-    .badge{background:#eef9f3;padding:8px 10px;border-radius:8px;font-weight:600;color:var(--success)}
-    .screenshot{max-width:320px;border-radius:10px;box-shadow:0 8px 30px rgba(12,14,26,0.08)}
-    .reviews{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
-    .rev{background:#fff;padding:12px;border-radius:10px;box-shadow:0 6px 20px rgba(12,14,26,0.04);flex:1;min-width:200px}
-    footer{margin-top:20px;color:var(--muted);font-size:13px;text-align:center}
-    /* 小屏适配 */
-    @media (max-width:720px){
-      .hero{flex-direction:column}
-      h1{font-size:22px}
+    :root {
+      --primary: #1a73e8;
+      --bg: #f4f8fc;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --success: #16a34a;
     }
-
-    /* form 样式 */
-    .inline-form{display:flex;gap:8px;align-items:center;margin-top:8px}
-    .inline-form input{flex:1;padding:12px;border-radius:8px;border:1px solid #e6eefb}
-    .inline-form button{padding:12px 16px;border-radius:8px;border:none;background:var(--accent);color:#fff;font-weight:700}
-    .small{font-size:13px;color:var(--muted)}
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Arial, sans-serif; background: var(--bg); color: var(--text); }
+    .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+    .card { background: var(--card); border-radius: 12px; padding: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+    .hero { display: flex; flex-wrap: wrap; align-items: center; gap: 24px; }
+    .hero-left { flex: 1; min-width: 280px; }
+    .hero-right { flex: 1; text-align: center; }
+    h1 { font-size: 28px; margin-bottom: 12px; }
+    p.lead { font-size: 16px; color: var(--muted); margin-bottom: 20px; }
+    .price-box { background: #eef5ff; border-radius: 10px; padding: 16px; display: inline-block; margin-bottom: 20px; }
+    .price-box .price { font-size: 24px; font-weight: bold; color: var(--primary); }
+    .cta-btn { background: var(--primary); color: #fff; padding: 16px 24px; border: none; border-radius: 10px; text-decoration: none; font-size: 18px; font-weight: bold; }
+    .features { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+    .feature { flex: 1; min-width: 150px; background: #f9fbff; padding: 16px; border-radius: 10px; text-align: center; }
+    .trust { display: flex; align-items: center; gap: 12px; margin-top: 16px; }
+    .badge { background: #e6ffef; color: var(--success); padding: 8px 12px; border-radius: 8px; font-weight: bold; }
+    .reviews { margin-top: 24px; }
+    .review { background: #ffffff; padding: 16px; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.04); margin-bottom: 12px; }
+    .review strong { font-size: 16px; color: #f59e0b; } /* gold star */
+    footer { margin-top: 30px; font-size: 14px; color: var(--muted); text-align: center; }
+    @media (max-width: 640px) {
+      .hero { flex-direction: column; }
+      h1 { font-size: 24px; }
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="card hero">
       <div class="hero-left">
-        <div class="logo">
-          <!-- 可替换为 Surfshark LOGO 或自家品牌 -->
-          <img src="https://upload.wikimedia.org/wikipedia/commons/8/8b/Surfshark_logo.svg" alt="Surfshark" />
-          <div style="font-weight:700;color:var(--muted)">Surfshark — 美国专属优惠</div>
-        </div>
-
-        <h1>安全、快速、无日志 — 立刻保护你的网络隐私</h1>
-        <p class="lead">解锁被限制内容、提高上网隐私与安全。限时优惠：首次订阅最高折扣，30天无理由退款保障。</p>
-
+        <h1>Secure Your Connection with Surfshark VPN</h1>
+        <p class="lead">Protect your privacy, access content freely, and browse safer than ever. Limited-time US offer with 30-day money-back guarantee.</p>
         <div class="price-box">
-          <div class="price-big">$2.49 / 月（首年折扣）</div>
-          <div class="small">适用于美国用户 · 30天退款保证 · 支持无限设备</div>
+          <div class="price">$2.49 / mo*</div>
+          <div class="muted">Special US rate | All devices | Unlimited bandwidth</div>
         </div>
-
-        <!-- 主 CTA: 把 href 替换为你的联盟点击链接（带 clickid 占位） -->
-        <p style="margin-top:14px">
-          <a id="primary-cta" class="cta" href="https://your-affiliate-domain.com/offer?clickid={CLICKID}" target="_blank" rel="noopener">立即领取优惠</a>
-          <a class="secondary-cta" href="#how">了解更多</a>
+        <p>
+          <a id="ctaButton" class="cta-btn" href="https://s9aoz.bemobtrcks.com/go/1b043394-d01e-40c7-a9cb-91cfa9418ae5?visitor_id=${SUBID}&zoneid={zoneid}&campaignid={campaignid}&bannerid={bannerid}" target="_blank" rel="noopener">Get Surfshark Now</a>
         </p>
-
-        <!-- 简单邮箱采集（可选） -->
-        <form id="leadForm" class="inline-form" onsubmit="handleLead(event)">
-          <input id="email" type="email" placeholder="输入邮箱接收优惠码 (可选)" />
-          <button type="submit">发送优惠</button>
-        </form>
-        <div id="leadMsg" class="small" style="margin-top:8px;display:none"></div>
-
-        <div class="features" aria-hidden="false">
-          <div class="feat"><strong>无限设备</strong><div class="small">一个账户同时保护所有设备</div></div>
-          <div class="feat"><strong>高速服务器</strong><div class="small">遍布全球，流媒体畅连</div></div>
-          <div class="feat"><strong>严格无日志</strong><div class="small">隐私优先，不记录活动</div></div>
+        <div class="features">
+          <div class="feature"><strong>No-logs Policy</strong><div class="muted">We don’t track your data</div></div>
+          <div class="feature"><strong>Military-grade Encryption</strong><div class="muted">AES-256 & secure protocols</div></div>
+          <div class="feature"><strong>Streaming Unblocked</strong><div class="muted">Netflix, Hulu, Disney+ works</div></div>
         </div>
-
         <div class="trust">
-          <div class="badge">30天退款</div>
-          <div class="small">受信任的安全专家推荐 · 24/7 客服支持</div>
+          <div class="badge">30-Day Money-Back</div>
+          <div class="muted">Trusted by millions globally</div>
         </div>
-
-        <div class="reviews">
-          <div class="rev"><strong>★★★★★</strong><div class="small">“连接速度超快，支持多设备，推荐给朋友。” — Alex, NY</div></div>
-          <div class="rev"><strong>★★★★★</strong><div class="small">“Netflix、Hulu 都能解锁，客服很快。” — Mary, CA</div></div>
-        </div>
-
       </div>
-
-      <div style="flex-basis:340px;display:flex;flex-direction:column;align-items:center;gap:12px">
-        <img class="screenshot" src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=6c9b6edb0f50b3c59a4f0f7febd2d1d8" alt="App screenshot" />
-        <div class="card small" style="text-align:center">
-          <div style="font-weight:700">专属优惠</div>
-          <div class="small">使用本页面链接购买，优先获得折扣与延长试用</div>
-        </div>
+      <div class="hero-right">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8b/Surfshark_logo.svg" alt="Surfshark Logo" style="max-width:200px; margin-bottom:20px;" />
+        <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=6c9b6edb0f50b3c59a4f0f7febd2d1d8" alt="VPN screenshot" style="max-width:100%; border-radius:10px;" />
       </div>
     </div>
 
-    <!-- 详细卖点 / FAQ -->
-    <div id="how" class="card" style="margin-top:18px">
-      <h2 style="margin-top:0">如何使用（快速三步）</h2>
+    <div class="card" style="margin-top:24px;">
+      <h2>How It Works (3 Simple Steps)</h2>
       <ol>
-        <li>点击“立即领取优惠” → 跳转到 Surfshark 官方结算页（经过联盟追踪）</li>
-        <li>完成注册并付款（支持信用卡 / PayPal）</li>
-        <li>回到邮箱激活并下载客户端，立即受保护</li>
+        <li>Click “Get Surfshark Now” → you’ll be redirected via our tracking link</li>
+        <li>Complete sign-up and payment on Surfshark official checkout</li>
+        <li>Download the app, connect, and enjoy a secure internet</li>
       </ol>
+      <h3>Frequently Asked Questions</h3>
+      <p><strong>Q:</strong> Do you offer refunds? <br><strong>A:</strong> Yes — 30-day no-questions-asked money-back guarantee.</p>
+      <p><strong>Q:</strong> Which devices are supported? <br><strong>A:</strong> Windows, Mac, iOS, Android, routers — unlimited devices.</p>
+      <p><strong>Q:</strong> Is it truly private? <br><strong>A:</strong> Yes — strict no-logs policy, your data stays yours.</p>
+    </div>
 
-      <h3>常见问题</h3>
-      <p><strong>Q：</strong>是否有退款保障？ <br><strong>A：</strong>是的，Surfshark 提供 30 天无理由退款保障。</p>
-      <p><strong>Q：</strong>支持哪些设备？ <br><strong>A：</strong>Windows、Mac、iOS、Android、路由器等无限设备。</p>
-
-      <h3>隐私与合规</h3>
-      <p class="small">我们尊重用户隐私，不会出售你的邮箱或个人数据。若需更严格合规，请在结算前保证落地页和结算页信息一致并提供隐私政策链接。</p>
+    <div class="reviews">
+      <div class="review"><strong>★★★★★</strong> “This VPN is lightning-fast and easy to use. Best I’ve found so far!” — Sarah, CA</div>
+      <div class="review"><strong>★★★★★</strong> “Works for Netflix US, very reliable, 5 stars.” — John, NY</div>
     </div>
 
     <footer>
-      © Surfshark 提供信息展示 — 本页面为推广落地页示例。若你是联盟主或广告主，请将链接替换为你的联盟点击链接并配置转化回传。
+      * Promotional rate for US users. Terms & conditions apply.<br>
+      © 2025 Surfshark — Affiliate page, content for promotional purposes only.
     </footer>
   </div>
-
-  <script>
-    /* ======= 简单前端功能（不作为最终追踪，仅用于体验） ======= */
-    function handleLead(e){
-      e.preventDefault();
-      const email = document.getElementById('email').value.trim();
-      const msg = document.getElementById('leadMsg');
-      if(!email){
-        msg.style.display = 'block';
-        msg.textContent = '请填写有效邮箱或留空直接点击领取优惠。';
-        return;
-      }
-      // 这里可以触发你的邮件采集 API
-      msg.style.display = 'block';
-      msg.textContent = '优惠已发送，请检查邮箱（只是示例）。';
-    }
-
-    /* ======= 点击带 ClickID 的处理（示例） =======
-      - 在真实投放中，广告平台会在跳转链接里带上 clickid（或 subid）。例子占位为 {CLICKID}
-      - 你需要将 primary-cta 的 href 替换为你联盟提供的跳转链接（含占位符），
-        并在用户完成转化后用 S2S 回传把 clickid 回传给广告平台（见下方文档）
-    */
-  </script>
 </body>
 </html>
