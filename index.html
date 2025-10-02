@@ -1,117 +1,209 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Secure Your Internet with Surfshark VPN</title>
-  <meta name="description" content="Protect your privacy, unblock content, and browse safely. Exclusive offer for US users. 30-day money-back guarantee." />
-  <meta http-equiv="delegate-ch" content="sec-ch-ua https://s9aoz.bemobtrcks.com; sec-ch-ua-mobile https://s9aoz.bemobtrcks.com; sec-ch-ua-arch https://s9aoz.bemobtrcks.com; sec-ch-ua-model https://s9aoz.bemobtrcks.com; sec-ch-ua-platform https://s9aoz.bemobtrcks.com; sec-ch-ua-platform-version https://s9aoz.bemobtrcks.com; sec-ch-ua-bitness https://s9aoz.bemobtrcks.com; sec-ch-ua-full-version-list https://s9aoz.bemobtrcks.com; sec-ch-ua-full-version https://s9aoz.bemobtrcks.com">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Digital Transformation for Business</title>
   <style>
-    :root {
-      --primary: #1a73e8;
-      --bg: #f4f8fc;
-      --card: #ffffff;
-      --text: #1f2937;
-      --muted: #6b7280;
-      --success: #16a34a;
+    body {
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: #333;
     }
-    * { box-sizing: border-box; }
-    body { margin: 0; font-family: Arial, sans-serif; background: var(--bg); color: var(--text); }
-    .container { max-width: 800px; margin: 0 auto; padding: 20px; }
-    .card { background: var(--card); border-radius: 12px; padding: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
-    .hero { display: flex; flex-wrap: wrap; align-items: center; gap: 24px; }
-    .hero-left { flex: 1; min-width: 280px; }
-    .hero-right { flex: 1; text-align: center; }
-    h1 { font-size: 28px; margin-bottom: 12px; }
-    p.lead { font-size: 16px; color: var(--muted); margin-bottom: 20px; }
-    .price-box { background: #eef5ff; border-radius: 10px; padding: 16px; display: inline-block; margin-bottom: 20px; }
-    .price-box .price { font-size: 24px; font-weight: bold; color: var(--primary); }
-    .cta-btn { background: var(--primary); color: #fff; padding: 16px 24px; border: none; border-radius: 10px; text-decoration: none; font-size: 18px; font-weight: bold; }
-    .features { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
-    .feature { flex: 1; min-width: 150px; background: #f9fbff; padding: 16px; border-radius: 10px; text-align: center; }
-    .trust { display: flex; align-items: center; gap: 12px; margin-top: 16px; }
-    .badge { background: #e6ffef; color: var(--success); padding: 8px 12px; border-radius: 8px; font-weight: bold; }
-    .reviews { margin-top: 24px; }
-    .review { background: #ffffff; padding: 16px; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.04); margin-bottom: 12px; }
-    .review strong { font-size: 16px; color: #f59e0b; } /* gold star */
-    footer { margin-top: 30px; font-size: 14px; color: var(--muted); text-align: center; }
-    @media (max-width: 640px) {
-      .hero { flex-direction: column; }
-      h1 { font-size: 24px; }
+    header {
+      background: #0b1f3a;
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    nav a {
+      color: #fff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Hero Banner */
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                  url('https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+      color: #fff;
+      text-align: center;
+      padding: 120px 20px;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+    .hero .cta-btn {
+      background: #0078d7;
+      color: #fff;
+      padding: 12px 24px;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      border-radius: 4px;
+    }
+    .hero .cta-btn:hover {
+      background: #005ea6;
+    }
+
+    /* About Section */
+    .about {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+    }
+    .about h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #0b1f3a;
+    }
+
+    /* Partners Section */
+    .partners {
+      background: #f8f8f8;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .partners h3 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      color: #0b1f3a;
+    }
+    .partner-logos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+    .partner-logos img {
+      height: 40px;
+      filter: grayscale(100%);
+      transition: filter 0.3s;
+    }
+    .partner-logos img:hover {
+      filter: grayscale(0%);
+    }
+
+    /* Features Section */
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1000px;
+      margin: 60px auto;
+      gap: 20px;
+      padding: 0 20px;
+    }
+    .feature-card {
+      flex: 1;
+      min-width: 250px;
+      background: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+    .feature-card h4 {
+      color: #0b1f3a;
+      margin-bottom: 10px;
+    }
+
+    /* Footer */
+    footer {
+      background: #0b1f3a;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
+
+    @media(max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        margin-top: 10px;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="card hero">
-      <div class="hero-left">
-        <h1>Secure Your Connection with Surfshark VPN</h1>
-        <p class="lead">Protect your privacy, access content freely, and browse safer than ever. Limited-time US offer with 30-day money-back guarantee.</p>
-        <div class="price-box">
-          <div class="price">$2.49 / mo*</div>
-          <div class="muted">Special US rate | All devices | Unlimited bandwidth</div>
-        </div>
-        <p>
-          <a id="ctaButton" class="cta-btn" href="https://s9aoz.bemobtrcks.com/click/1?ns=c%3D26b4d4cc-fadc-430c-a91f-d13a2bd34433..l%3D2..a%3D0..b%3D0" target="_blank" rel="noopener">Get Surfshark Now</a>
-        </p>
-        <div class="features">
-          <div class="feature"><strong>No-logs Policy</strong><div class="muted">We don’t track your data</div></div>
-          <div class="feature"><strong>Military-grade Encryption</strong><div class="muted">AES-256 & secure protocols</div></div>
-          <div class="feature"><strong>Streaming Unblocked</strong><div class="muted">Netflix, Hulu, Disney+ works</div></div>
-        </div>
-        <div class="trust">
-          <div class="badge">30-Day Money-Back</div>
-          <div class="muted">Trusted by millions globally</div>
-        </div>
-      </div>
-      <div class="hero-right">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8b/Surfshark_logo.svg" alt="Surfshark Logo" style="max-width:200px; margin-bottom:20px;" />
-        <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=6c9b6edb0f50b3c59a4f0f7febd2d1d8" alt="VPN screenshot" style="max-width:100%; border-radius:10px;" />
-      </div>
-    </div>
 
-    <div class="card" style="margin-top:24px;">
-      <h2>How It Works (3 Simple Steps)</h2>
-      <ol>
-        <li>Click “Get Surfshark Now” → you’ll be redirected via our tracking link</li>
-        <li>Complete sign-up and payment on Surfshark official checkout</li>
-        <li>Download the app, connect, and enjoy a secure internet</li>
-      </ol>
-      <h3>Frequently Asked Questions</h3>
-      <p><strong>Q:</strong> Do you offer refunds? <br><strong>A:</strong> Yes — 30-day no-questions-asked money-back guarantee.</p>
-      <p><strong>Q:</strong> Which devices are supported? <br><strong>A:</strong> Windows, Mac, iOS, Android, routers — unlimited devices.</p>
-      <p><strong>Q:</strong> Is it truly private? <br><strong>A:</strong> Yes — strict no-logs policy, your data stays yours.</p>
-    </div>
+  <!-- Header -->
+  <header>
+    <div class="logo">Digital Impact</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#partners">Partners</a>
+      <a href="#features">Solutions</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-    <div class="reviews">
-      <div class="review"><strong>★★★★★</strong> “This VPN is lightning-fast and easy to use. Best I’ve found so far!” — Sarah, CA</div>
-      <div class="review"><strong>★★★★★</strong> “Works for Netflix US, very reliable, 5 stars.” — John, NY</div>
-    </div>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Empowering Businesses through Digital Transformation</h1>
+    <p>We help companies grow with cutting-edge advertising and data-driven marketing solutions.</p>
+    <button class="cta-btn" onclick="location.href='#contact'">Contact Us</button>
+  </section>
 
-    <footer>
-      * Promotional rate for US users. Terms & conditions apply.<br>
-      © 2025 Surfshark — Affiliate page, content for promotional purposes only.
-    </footer>
-  <script type="text/javascript">
-function bemobCb(params) {
-    var t = params.trackingDomain+'/click/';
-    var re = new RegExp(t+'?(\\d*)');
-    var e = document.querySelectorAll('a[href*="'+t+'"]');
-    for (var i = 0; i < e.length; i++) {
-        var ex = re.exec(e[i].href);
-        if (ex) {
-            e[i].href = params.ctaSecureUrl.replace('%%OFFER_NUMBER%%', ex[1] || 1);
-        }
-    }
-}
-</script>
-<script type="text/javascript">!function(){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src="https://s9aoz.bemobtrcks.com/landing/26b4d4cc-fadc-430c-a91f-d13a2bd34433?callback=bemobCb&rule=1&path=1&landing=1&"+window.location.search.substring(1);var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)}();</script><noscript><img src="https://s9aoz.bemobtrcks.com/landing/26b4d4cc-fadc-430c-a91f-d13a2bd34433?rule=1&path=1&landing=1" alt=""></noscript>
+  <!-- About -->
+  <section class="about" id="about">
+    <h2>About Our Mission</h2>
+    <p>We partner with top advertising networks and technology platforms to accelerate digital growth for modern businesses. From strategy to execution, our solutions are designed to maximize your online impact and drive measurable results.</p>
+  </section>
+
+  <!-- Partners -->
+  <section class="partners" id="partners">
+    <h3>Trusted by Global Advertising Partners</h3>
+    <div class="partner-logos">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Google_Ads_logo.svg" alt="Google Ads">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Microsoft_logo_%282012%29.svg" alt="Bing Ads">
+      <img src="https://propellerads.com/wp-content/uploads/2020/06/propellerads-logo.svg" alt="PropellerAds">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Commission_Junction_logo.svg" alt="CJ Affiliate">
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features" id="features">
+    <div class="feature-card">
+      <h4>Digital Strategy</h4>
+      <p>Comprehensive planning and execution to align your business goals with digital opportunities.</p>
+    </div>
+    <div class="feature-card">
+      <h4>Performance Marketing</h4>
+      <p>Leverage top networks to maximize ROI and reach the right audiences with precision targeting.</p>
+    </div>
+    <div class="feature-card">
+      <h4>Analytics & Insights</h4>
+      <p>Turn data into growth with real-time reporting, optimization, and actionable insights.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <p>📧 Contact us at <a href="mailto:info@digitalimpact.com" style="color:#4da3ff;">info@digitalimpact.com</a></p>
+    <p>© 2025 Digital Impact. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
-
-
-
-
-
-
-
