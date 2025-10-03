@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Protect Your Privacy — Secure VPN Now</title>
+<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3064/3064197.png" />
+<style>
+  :root {
+    --bg: #061017;
+    --card: #0d1f29;
+    --accent: #00c2a8;
+    --accent-dark: #00a08a;
+    --text-muted: rgba(255,255,255,0.7);
+    --danger: #ff5b6e;
+    font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: linear-gradient(180deg,#040c12 0%,#081820 100%);
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    height: 100vh;
+  }
+  header {
+    text-align: center;
+    padding: 20px;
+  }
+  header h1 {
+    font-size: 28px;
+    margin: 10px 0 5px;
+    font-weight: 800;
+  }
+  header p {
+    color: var(--text-muted);
+    font-size: 15px;
+    margin: 0;
+  }
+
+  .main {
+    max-width: 960px;
+    margin: 20px auto;
+    background: var(--card);
+    border-radius: 14px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 24px;
+  }
+  @media (max-width: 860px) {
+    .main { grid-template-columns: 1fr; padding: 20px; }
+  }
+
+  .left .badge {
+    background: rgba(255,255,255,0.05);
+    display: inline-flex;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+  }
+  .left h2 {
+    font-size: 24px;
+    margin: 0 0 10px;
+    font-weight: 700;
+  }
+  .left p {
+    font-size: 15px;
+    color: var(--text-muted);
+    margin: 0 0 18px;
+  }
+
+  .benefits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  .benefit {
+    background: rgba(255,255,255,0.03);
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 14px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  .benefit .icon {
+    background: var(--accent);
+    color: #042026;
+    font-weight: 800;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cta {
+    background: linear-gradient(90deg,var(--accent),var(--accent-dark));
+    color: #042026;
+    font-weight: 800;
+    padding: 14px 20px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 8px 20px rgba(0,194,168,0.25);
+    margin-top: 10px;
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: flex-start;
+  }
+
+  .ip-box {
+    background: rgba(255,255,255,0.04);
+    padding: 14px;
+    border-radius: 10px;
+  }
+  .ip-box strong {
+    font-size: 16px;
+  }
+  .ip {
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 4px;
+  }
+  .risk {
+    color: var(--danger);
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  .countdown {
+    background: linear-gradient(90deg,#ff8b99,#ff5b6e);
+    color: #042026;
+    font-weight: 800;
+    font-size: 18px;
+    padding: 14px;
+    text-align: center;
+    border-radius: 10px;
+  }
+
+  footer {
+    text-align: center;
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    padding: 20px 10px 70px;
+  }
+
+  /* mobile fixed cta */
+  .mobile-cta {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(90deg,var(--accent),var(--accent-dark));
+    text-align: center;
+    padding: 14px;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.4);
+  }
+  .mobile-cta a {
+    color: #042026;
+    font-weight: 800;
+    font-size: 16px;
+    text-decoration: none;
+    display: block;
+  }
+  @media (min-width: 768px) {
+    .mobile-cta { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>⚠️ Your Connection May Be Exposed</h1>
+  <p>Public Wi-Fi, trackers, and ISPs can leak your real IP. Protect it in 1-Click.</p>
+</header>
+
+<main class="main">
+  <div class="left">
+    <div class="badge">VPN Security Alert</div>
+    <h2>Stay anonymous & secure online — instantly.</h2>
+    <p>Protect your privacy, unblock streaming, and shield your data with a trusted VPN. No tech skills required.</p>
+
+    <div class="benefits">
+      <div class="benefit"><div class="icon">1</div>Hide IP & Location</div>
+      <div class="benefit"><div class="icon">2</div>Secure Public Wi-Fi</div>
+      <div class="benefit"><div class="icon">3</div>Access Global Content</div>
+      <div class="benefit"><div class="icon">4</div>1-Click Setup</div>
+    </div>
+
+    <a href="#" class="cta" id="mainCta">🛡️ Protect My Connection</a>
+  </div>
+
+  <div class="right">
+    <div class="ip-box">
+      <strong>Your IP:</strong>
+      <div class="ip" id="ipAddr">Detecting...</div>
+      <div class="risk" id="riskText">RISK: HIGH</div>
+    </div>
+    <div class="countdown" id="countdown">LIMITED OFFER ENDS IN 02:00:00</div>
+  </div>
+</main>
+
+<div class="mobile-cta">
+  <a href="#" id="mobileCtaBtn">🛡️ Protect My Connection</a>
+</div>
+
+<footer>© <span id="year"></span> Secure VPN Prelander — Affiliate Demo</footer>
+
+<script>
+  const OFFER_URL = 'OFFER_URL_HERE'; // ← 这里替换成你的联盟链接
+
+  function goOffer() {
+    if (OFFER_URL === 'OFFER_URL_HERE') {
+      alert('⚠️ 请替换 OFFER_URL 为你的真实联盟链接');
+      return;
+    }
+    window.location.href = OFFER_URL;
+  }
+
+  document.getElementById('mainCta').addEventListener('click', e => { e.preventDefault(); goOffer(); });
+  document.getElementById('mobileCtaBtn').addEventListener('click', e => { e.preventDefault(); goOffer(); });
+
+  // 获取 IP（增强信任）
+  fetch('https://api.ipify.org?format=json')
+    .then(r => r.json())
+    .then(d => { document.getElementById('ipAddr').textContent = d.ip; })
+    .catch(()=>{ document.getElementById('ipAddr').textContent = 'Unavailable'; });
+
+  // 倒计时 2 小时
+  let sec = 2*60*60;
+  const cEl = document.getElementById('countdown');
+  function tick(){
+    if(sec<=0){ cEl.textContent='OFFER EXPIRED'; return; }
+    sec--;
+    const h = String(Math.floor(sec/3600)).padStart(2,'0');
+    const m = String(Math.floor(sec%3600/60)).padStart(2,'0');
+    const s = String(sec%60).padStart(2,'0');
+    cEl.textContent = `LIMITED OFFER ENDS IN ${h}:${m}:${s}`;
+  }
+  setInterval(tick,1000);
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
