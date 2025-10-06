@@ -1,1 +1,328 @@
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LemonsRush Digital | Digital Transformation & Advertising</title>
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/616/616554.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <style>
+        :root {
+            --primary: #003366;
+            --secondary: #0066cc;
+            --accent: #ff6600;
+            --light-bg: #f5f5f5;
+            --dark-text: #333;
+            --light-text: #777;
+            --white: #fff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light-bg);
+            color: var(--dark-text);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 102, 204, 0.7)),
+                url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1350&q=80') no-repeat center/cover;
+            color: var(--white);
+            text-align: center;
+            padding: 180px 0 120px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* Partners */
+        .partners {
+            background: var(--white);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .partners h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 30px;
+        }
+
+        .partner-logos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .partner-logos img {
+            height: 45px;
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+
+        .partner-logos img:hover {
+            filter: none;
+            opacity: 1;
+        }
+
+        /* Services */
+        .services {
+            padding: 80px 0;
+            background: var(--light-bg);
+        }
+
+        .services h2 {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 50px;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card i {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: var(--white);
+            padding: 60px 0 20px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--white);
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .footer-about p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+        }
+
+        .footer-links h3 {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            color: var(--white);
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+            padding-top: 15px;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">LemonsRush Digital</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>Accelerate Your Digital Growth</h1>
+            <p>Empowering global brands through innovative advertising, data-driven strategies, and digital
+                transformation.</p>
+        </div>
+    </section>
+
+    <!-- Partners -->
+    <section class="partners">
+        <div class="container">
+            <h2>Trusted by Leading Platforms</h2>
+            <div class="partner-logos">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google Ads">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg"
+                    alt="Microsoft Advertising">
+                <img src="https://propellerads.com/wp-content/uploads/2023/07/Propellerads-logo-header-1.svg"
+                    alt="Propeller Ads">
+                <img src="data:image/png;base64,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"
+                    alt="CJ Affiliate">
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services">
+        <div class="container">
+            <h2>Our Core Services</h2>
+            <div class="service-grid">
+                <div class="service-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Advertising Strategy</h3>
+                    <p>Data-driven advertising campaigns optimized across Google, Bing, and major networks.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-database"></i>
+                    <h3>Analytics & Insights</h3>
+                    <p>Turn complex data into business growth with our advanced analytics solutions.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-globe"></i>
+                    <h3>Global Reach</h3>
+                    <p>Scale your campaigns to international audiences through proven marketing channels.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <a href="#" class="footer-logo">LemonsRush Digital</a>
+                    <p>
+                        LemonsRush Digital Pte. Ltd.
+                        Singapore-based digital transformation & advertising agency.
+                    </p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Company Information</h3>
+                    <ul>
+                        <li><strong>Legal Name:</strong> LemonsRush Digital Pte. Ltd.</li>
+                        <li><strong>Business Reg. No.:</strong> 202543789G</li>
+                        <li><strong>Address:</strong> 120 Robinson Road, #15-01, Singapore 068913</li>
+                        <li><strong>Email:</strong> ad@cloudnices.com</li>
+                        <li><strong>Website:</strong> https://lemonsrush.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                © 2025 LemonsRush Digital Pte. Ltd. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
+
+
