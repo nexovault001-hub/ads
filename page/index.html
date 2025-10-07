@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUvWIAIF8sQn8_gF9kf7QJZjqC1zWkUZMPOg&s" type="image/png">
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUvWIAIF8sQn8_gF9kf7QJZjqC1zWkUZMPOg&s"
+        type="image/png">
     <title>Live Cam Access - Adults Only</title>
     <style>
         body {
@@ -86,17 +87,23 @@
 
     <h1>🔞 Adults Only – Live Cam Streams</h1>
     <p>You must be 18+ to enter this site. Click below to continue.</p>
-    <button onclick="window.location.href='http://go.lemonsrush.com/click'">
+    <button id="enterBtn">
         I am 18 or older – Enter Now
     </button>
 
-    <!-- Optional auto redirect after delay
-  <script>
-    setTimeout(function () {
-      window.location.href = 'http://go.lemonsrush.com/click';
-    }, 2500);
-  </script>
-  -->
+    <script>
+        document.getElementById("enterBtn").addEventListener("click", function () {
+            var queryString = window.location.search;
+
+            window.location.href = "http://go.lemonsrush.com/click" + queryString;
+        });
+
+
+        // setTimeout(function () {
+        //   window.location.href = 'http://go.lemonsrush.com/click';
+        // }, 2500);
+    </script>
+
 </body>
 
 </html>
