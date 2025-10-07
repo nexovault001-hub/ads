@@ -5,22 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Live Cam Access - 18+ Only</title>
-    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUvWIAIF8sQn8_gF9kf7QJZjqC1zWkUZMPOg&s"
-        type="image/png">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/483/483361.png" type="image/png">
     <style>
         body {
-            background: url('https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1400&q=80') 
-                  center/cover no-repeat;
-            background-size: cover;
-            color: #fff;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+            height: 100vh;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
             text-align: center;
-            margin: 0;
-            backdrop-filter: brightness(0.6);
+            color: #fff;
+            backdrop-filter: brightness(0.55);
+            position: relative;
         }
 
         .overlay {
@@ -88,15 +87,15 @@
     <div class="overlay"></div>
 
     <div class="content">
-        <h1>🔞 Adults Only — Live Cam Streams</h1>
-        <p>You must be 18+ to access this site. Click the button below to continue to the live cam experience.</p>
+        <h1>🔞 Adults Only – Live Cam Streams</h1>
+        <p>You must be 18+ to enter. Click the button below to continue to the live cam experience.</p>
         <button id="enterBtn">I’m 18+ — Enter Now</button>
     </div>
 
     <script>
         document.getElementById("enterBtn").addEventListener("click", function () {
             const queryString = window.location.search;
-            // 👇 把这个链接换成你 CrakRevenue / tracker 的跳转链接（必须 https）
+            // 👇 替换为你的 CrakRevenue / Bemob HTTPS 跳转链接
             window.location.href = "https://go.lemonsrush.com/click" + queryString;
         });
     </script>
